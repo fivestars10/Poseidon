@@ -53,6 +53,7 @@ def file_exist():
         return open(file, 'r')
     except FileNotFoundError:
         print(bcolors.FAIL + '[*] Unable to locate ' + file)
+        return file_exist()
 
 
 def main():
